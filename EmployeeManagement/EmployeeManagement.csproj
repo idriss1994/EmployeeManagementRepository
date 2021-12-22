@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+   <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+   <UserSecretsId>bdf8549d-b9f3-4dd3-a4a2-af5761d5f72e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20211016083408_AddColumnPhotoPath.cs" />
+    <Compile Remove="Migrations\20211016083408_AddColumnPhotoPath.Designer.cs" />
+    <Compile Remove="Migrations\20211016084141_AddPhotoPathColumn.cs" />
+    <Compile Remove="Migrations\20211016084141_AddPhotoPathColumn.Designer.cs" />
+    <Compile Remove="Migrations\20211016084419_AddSomeProperty.cs" />
+    <Compile Remove="Migrations\20211016084419_AddSomeProperty.Designer.cs" />
+    <Compile Remove="Migrations\20211106232335_Extend_IdentityUser.cs" />
+    <Compile Remove="Migrations\20211106232335_Extend_IdentityUser.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.14.0" />
+  </ItemGroup>
+
+</Project>
