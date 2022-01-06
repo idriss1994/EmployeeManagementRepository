@@ -37,6 +37,22 @@ namespace EmployeeManagement.Models
             return employee;
         }
 
+        public IEnumerable<DeptHeadCount> EmployeeCountByDepartment(Dept? department)
+        {
+            IEnumerable<Employee> query = this.GetAllEmployee();
+            if (department.HasValue)
+            {
+                query = query.Where(emp => emp.Department == department);
+            }
+
+            return query.GroupBy(emp => emp.Department)
+                        .Select(g => new DeptHeadCount
+                        {
+                            Department = g.Key.Value,
+                            Count = g.Count()
+                        });
+        }
+
         public IEnumerable<Employee> GetAllEmployee()
         {
             return _context.Employees;

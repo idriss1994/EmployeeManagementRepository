@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "List of employee";
 }
-
+@*@await Component.InvokeAsync("HeadCount")*@ 
+<vc:head-count department="@null"></vc:head-count>
 <div class="card-deck">
     @foreach (var employee in Model)
     {

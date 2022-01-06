@@ -60,5 +60,9 @@ namespace EmployeeManagement.Models
             return employee;
         }
 
+        public IEnumerable<DeptHeadCount> EmployeeCountByDepartment(Dept? department)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
